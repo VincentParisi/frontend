@@ -17,5 +17,5 @@ steps:
 # TODO: it should be remove, by setting default permissions for the bucket.
 - name: gcr.io/cloud-builders/gsutil
 #  args: ["-m", "acl", "ch", "-u", "AllUsers:R", "gs://formation-my-bucket/**"]
-  args: ["iam",  "ch" , "AllUsers:objectViewer", "gs://formation-my-bucket/**"]
+#  args: ["iam",  "ch" , "AllUsers:objectViewer", "gs://formation-my-bucket/**"]
 
