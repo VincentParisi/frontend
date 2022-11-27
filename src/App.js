@@ -8,24 +8,25 @@ const cl = console.log
 
 
 function App() {
+  const [data,setData] = useState (null)
 
   const handleClick = async  (e) => {
     let a =  document.getElementById("a").value 
     let b =  document.getElementById("b").value 
     let res = await  CalcService.Add (a,b)
     cl (" on Click res " , a , b  , res )
-
+    setData(res)
   }
 
   return (
     <div className="App">
-      <h1>Version 2.0  (API Call ) </h1>
+      <h1>Version 3.0  (API Call ) </h1>
        a: <input  type="text" id="a" name="a" /> 
        b: <input  type="text" id="b" name="b" /> 
        <br/><br/>
        <button onClick={handleClick}>Submit</button>
        <br/><br/>
-       Somme <input  type="text"  name="c" /> 
+       Somme <input  type="text" id="c" name="c" value={data}/> 
 
     </div>
   );
