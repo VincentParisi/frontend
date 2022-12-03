@@ -2,7 +2,8 @@ pipeline {
   agent any
 
   environment {
-    IMAGE_NAME = 'C:/kubernetes/Application/ReactProject/reactcalc'
+    IMAGE_NAME  = 'vincentparisi/reactcal'
+    SOURCE      = 'C:/kubernetes/Application/ReactProject/reactcalc'
     IMAGE_TAG = 'latest'
     APP_NAME = 'jenkins-example-react'
   }
