@@ -10,17 +10,16 @@ pipeline {
 
 
   stages {
-        stage('Start Point ') {
-            steps {
-                echo 'Tying to Start Docker '
+            stage('Start Point ') {
+                steps {
+                    echo 'Tying to Start Docker '
+                }
             }
-        }
-  }
-  stages {
-    stage('Build') {
-      steps {
-        sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG .'
-      }
-    }
+
+            stage('Build') {
+            steps {
+                sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG .'
+                }
+            }
   }
 }
