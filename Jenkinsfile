@@ -10,25 +10,26 @@ pipeline {
 
 
   stages {
-    stage("verify tooling") {
-      steps {
-        sh '''
-          docker version
-          docker info
-          docker compose version 
-        '''
-      }
-    }
-            stage('Start Point ') {
-                steps {
-                    echo 'Tying to Start Docker '
-                }
-            }
-
-            stage('Build') {
+        stage("verify tooling") {
             steps {
-                sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG $SOURCE'
-                }
+                sh '''
+                docker version
+                docker info
+                docker compose version 
+                '''
             }
+        }
+        stage('Start Point ') {
+            steps {
+                echo 'Tying to Start Docker '
+            }
+        }
+
+        stage('Build') {
+            steps {
+                //sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG $SOURCE'
+                }
+        }
   }
+
 }
