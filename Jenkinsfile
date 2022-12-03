@@ -2,7 +2,6 @@ pipeline {
   agent any
 
   environment {
-    HEROKU_API_KEY = credentials('heroku-api-key')
     IMAGE_NAME = 'VincentParisi/frontend'
     IMAGE_TAG = 'latest'
     APP_NAME = 'jenkins-example-react'
