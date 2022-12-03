@@ -10,6 +10,15 @@ pipeline {
 
 
   stages {
+    stage("verify tooling") {
+      steps {
+        sh '''
+          docker version
+          docker info
+          docker compose version 
+        '''
+      }
+    }
             stage('Start Point ') {
                 steps {
                     echo 'Tying to Start Docker '
